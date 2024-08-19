@@ -1,0 +1,111 @@
+﻿<Window x:Class="HereHaveAPaSSword.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HereHaveAPaSSword"
+        mc:Ignorable="d"
+        Title="Here! Have a password!" Height="700" Width="1000" MinHeight="700" MinWidth="1000" WindowStartupLocation="CenterScreen" Background="#ffe3f1" Icon="IconPhoto.png">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="MyStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="BackgroundImage.png"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <Label Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource TitleLabel}">Genereaza parole sigure acum!</Label>
+
+        <Label Grid.Row="4" Grid.RowSpan="3" Style="{StaticResource DescriptionLabel}"></Label>
+        <TextBlock Grid.Row="5" Style="{StaticResource DescriptionTextBlock}">Caractere alfabetice:</TextBlock>
+        
+        <Label Grid.Row="4" Grid.Column="1" Grid.RowSpan="3" Style="{StaticResource BackgroundLabel}"></Label>
+        <Label Grid.Row="4" Grid.Column="1" Style="{StaticResource RestrictionLabel}">MINIM</Label>
+        <TextBox Name="AlphabetMin" Grid.Row="5" Grid.Column="1" Grid.RowSpan="2" Style="{StaticResource RestrictionTextBox}"></TextBox>
+        
+        <Label Grid.Row="4" Grid.Column="2" Grid.RowSpan="3" Style="{StaticResource BackgroundLabel}"></Label>
+        <Label Grid.Row="4" Grid.Column="2" Style="{StaticResource RestrictionLabel}">MAXIM</Label>
+        <TextBox Name="AlphabetMax" Grid.Row="5" Grid.Column="2" Grid.RowSpan="2" Style="{StaticResource RestrictionTextBox}"></TextBox>
+
+
+        <Label Grid.Row="8" Grid.RowSpan="3" Style="{StaticResource DescriptionLabel}"></Label>
+        <TextBlock Grid.Row="9" Style="{StaticResource DescriptionTextBlock}">Caractere numerice:</TextBlock>
+        
+        <Label Grid.Row="8" Grid.Column="1" Grid.RowSpan="3" Style="{StaticResource BackgroundLabel}"></Label>
+        <Label Grid.Row="8" Grid.Column="1" Style="{StaticResource RestrictionLabel}">MINIM</Label>
+        <TextBox Name="NumericMin" Grid.Row="9" Grid.Column="1" Grid.RowSpan="2" Style="{StaticResource RestrictionTextBox}"></TextBox>
+        
+        <Label Grid.Row="8" Grid.Column="2" Grid.RowSpan="3" Style="{StaticResource BackgroundLabel}"></Label>
+        <Label Grid.Row="8" Grid.Column="2" Style="{StaticResource RestrictionLabel}">MAXIM</Label>
+        <TextBox Name="NumericMax" Grid.Row="9" Grid.Column="2" Grid.RowSpan="2" Style="{StaticResource RestrictionTextBox}"></TextBox>
+
+
+        <Label Grid.Row="12" Grid.RowSpan="3" Style="{StaticResource DescriptionLabel}"></Label>
+        <TextBlock Grid.Row="13" Style="{StaticResource DescriptionTextBlock}">Caractere speciale:</TextBlock>
+        
+        <Label Grid.Row="12" Grid.Column="1" Grid.RowSpan="3" Style="{StaticResource BackgroundLabel}"></Label>
+        <Label Grid.Row="12" Grid.Column="1" Style="{StaticResource RestrictionLabel}">MINIM</Label>
+        <TextBox Name="SpecialMin" Grid.Row="13" Grid.Column="1" Grid.RowSpan="2" Style="{StaticResource RestrictionTextBox}"></TextBox>
+        
+        <Label Grid.Row="12" Grid.Column="2" Grid.RowSpan="3" Style="{StaticResource BackgroundLabel}"></Label>
+        <Label Grid.Row="12" Grid.Column="2" Style="{StaticResource RestrictionLabel}">MAXIM</Label>
+        <TextBox Name="SpecialMax" Grid.Row="13" Grid.Column="2" Grid.RowSpan="2" Style="{StaticResource RestrictionTextBox}"></TextBox>
+
+        
+        <Label Grid.Row="16" Grid.Column="1" Grid.RowSpan="3" Grid.ColumnSpan="2" Style="{StaticResource BackgroundLabel}"></Label>
+        <Label Grid.Row="16" Grid.Column="1" Grid.ColumnSpan="2"  Style="{StaticResource RestrictionLabel}">TOTAL CARACTERE</Label>
+        <TextBox Name="TotalCharacters" Grid.Row="17" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Style="{StaticResource RestrictionTextBox}">10</TextBox>
+
+        <Button Grid.Row="20" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="3" Click="GeneratePasswords" Style="{StaticResource GenerateButton}">GENEREAZA PAROLE</Button>
+
+        <ListView Grid.Column="3" Grid.Row="2" Grid.RowSpan="24" Name="PasswordList" Style="{StaticResource PasswordsListView}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBox BorderThickness="0" Background="AliceBlue" IsReadOnly="True" Text="{Binding Path=.}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListView>
+        <Label Name="ErrorsLabel" Grid.Column="1" Grid.Row="24" Grid.RowSpan="3" Grid.ColumnSpan="2" Style="{StaticResource ErrorsLabel}"></Label>
+        <TextBlock Name="ErrorsTextBlock" Grid.Column="1" Grid.Row="24" Grid.RowSpan="3" Grid.ColumnSpan="2" Style="{StaticResource ErrorsTextBlock}"></TextBlock>
+    </Grid>
+</Window>
